@@ -20,8 +20,10 @@
 
 package mocks
 
-import "github.com/uber/cadence/common/persistence"
-import "github.com/stretchr/testify/mock"
+import (
+	"github.com/stretchr/testify/mock"
+	"github.com/uber/cadence/common/persistence"
+)
 
 // HistoryManager mock implementation
 type HistoryV2Manager struct {
