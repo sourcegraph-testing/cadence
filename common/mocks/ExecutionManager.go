@@ -167,7 +167,6 @@ func (_m *ExecutionManager) DeleteTask(request *persistence.DeleteTaskRequest) e
 	return r0
 }
 
-
 // DeleteWorkflowExecution provides a mock function with given fields: request
 func (_m *ExecutionManager) DeleteWorkflowExecution(request *persistence.DeleteWorkflowExecutionRequest) error {
 	ret := _m.Called(request)
