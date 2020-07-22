@@ -1078,9 +1078,9 @@ func appendWorkflowExecutionsToTable(
 	for _, e := range executions {
 		var startTime, executionTime, closeTime string
 		if printRawTime {
-			startTime = fmt.Sprintf("%d", e.GetStartTime())
-			executionTime = fmt.Sprintf("%d", e.GetExecutionTime())
-			closeTime = fmt.Sprintf("%d", e.GetCloseTime())
+			startTime = strconv.Itoa(e.GetStartTime())
+			executionTime = strconv.Itoa(e.GetExecutionTime())
+			closeTime = strconv.Itoa(e.GetCloseTime())
 		} else {
 			startTime = convertTime(e.GetStartTime(), !printDateTime)
 			executionTime = convertTime(e.GetExecutionTime(), !printDateTime)
@@ -1296,9 +1296,9 @@ func scanWorkflow(c *cli.Context, table *tablewriter.Table, queryOpen bool) func
 		for _, e := range result {
 			var startTime, executionTime, closeTime string
 			if printRawTime {
-				startTime = fmt.Sprintf("%d", e.GetStartTime())
-				executionTime = fmt.Sprintf("%d", e.GetExecutionTime())
-				closeTime = fmt.Sprintf("%d", e.GetCloseTime())
+				startTime = strconv.Itoa(e.GetStartTime())
+				executionTime = strconv.Itoa(e.GetExecutionTime())
+				closeTime = strconv.Itoa(e.GetCloseTime())
 			} else {
 				startTime = convertTime(e.GetStartTime(), !printDateTime)
 				executionTime = convertTime(e.GetExecutionTime(), !printDateTime)
